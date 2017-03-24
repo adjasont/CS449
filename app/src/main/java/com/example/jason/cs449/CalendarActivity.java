@@ -174,7 +174,9 @@ public class CalendarActivity extends AppCompatActivity {
                 this.context = context;
                 this.events = objects;
             }
-
+        // pretty sure you want to check if convertView is null first, no? This is how views get recycled (if neccessary), this may
+        // not be needed when dealing with TextViews only, I know I had to do it that way for ImageViews.
+       
             public View getView(int position, View convertView, ViewGroup parent) {
 
                 Event event = events.get(position);

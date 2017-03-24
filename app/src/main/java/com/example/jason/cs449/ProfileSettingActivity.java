@@ -19,6 +19,8 @@ import com.google.firebase.database.ValueEventListener;
  * Created by Jason on 2/20/2017.
  */
 
+// firebase keeps the code really clean and easy to read, nice -BS
+
 public class ProfileSettingActivity extends AppCompatActivity {
 
     private EditText firstName, lastName, birthDate;
