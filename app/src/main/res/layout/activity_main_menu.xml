@@ -1,36 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="1">
+    android:orientation="vertical">
 
-    <Button
-        android:text="Work Out"
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/experienceBar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:indeterminate="false"
+            android:layout_weight="1"/>
+
+        <Button
+            android:text="LV"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/level" />
+    </LinearLayout>
+
+    <Space
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/workout"
-        android:layout_weight="0.12" />
+        android:layout_weight="1"/>
 
-    <Button
-        android:text="Calendar"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/calendar"
-        android:layout_weight="0.07" />
+        android:layout_weight="1">
 
-    <Button
-        android:text="Social"
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Social"
+            android:background="@drawable/round_button"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:id="@+id/social"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Stats"
+            android:background="@drawable/round_button"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:id="@+id/workout"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/social"
-        android:layout_weight="0.11" />
+        android:layout_weight="1">
 
-    <Button
-        android:text="logout"
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Calendar"
+            android:background="@drawable/round_button"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:id="@+id/calendar"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Logout"
+            android:background="@drawable/round_button"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:id="@+id/logout"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <Space
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/logout"
-        android:layout_weight="0.17" />
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
 </LinearLayout>

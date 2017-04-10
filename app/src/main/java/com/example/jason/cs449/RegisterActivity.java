@@ -27,6 +27,8 @@ public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     private Button buttonRegisterUser;
     private EditText inputEmail, inputPassword;
+    private String email, password;
+    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -34,6 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         auth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         buttonRegisterUser = (Button) findViewById(R.id.registerUser);
         inputEmail = (EditText) findViewById(R.id.email);
@@ -54,11 +57,12 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
         buttonRegisterUser.setOnClickListener(new View.OnClickListener() {
+            //When clicked. Push user registration information to the DB
             @Override
             public void onClick(View v) {
 
-                String email = inputEmail.getText().toString().trim();
-                String password = inputPassword.getText().toString().trim();
+                email = inputEmail.getText().toString().trim();
+                password = inputPassword.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
@@ -86,7 +90,8 @@ public class RegisterActivity extends AppCompatActivity {
                                     Toast.makeText(RegisterActivity.this, "Authentication failed." + task.getException(),
                                             Toast.LENGTH_SHORT).show();
                                 } else {
-                                    startActivity(new Intent(RegisterActivity.this, MainMenuActivity.class));
+                                    mDatabase.child("Users").child(auth.getCurrentUser().getUid()).child("Email").setValue(email);
+                                    startActivity(new Intent(RegisterActivity.this, ProfileSettingActivity.class));
                                     finish();
                                 }
                             }

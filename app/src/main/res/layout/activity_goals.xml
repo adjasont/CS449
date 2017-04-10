@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TabHost
+                android:id="@+id/datesTabHost"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TabWidget
+                            android:id="@android:id/tabs"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"/>
+
+                        <Button
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:background="@android:drawable/ic_menu_add"
+                            android:id="@+id/addGoalButton" />
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                                android:id="@android:id/tabcontent"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:id="@+id/tab1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <ListView
+                                        android:id="@+id/dayList"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/tab2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <ListView
+                                        android:id="@+id/weekList"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/tab3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <ListView
+                                        android:id="@+id/monthList"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/tab4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <ListView
+                                        android:id="@+id/yearList"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" />
+
+                                </LinearLayout>
+                            </FrameLayout>
+                </LinearLayout>
+
+            </TabHost>
+        </LinearLayout>
+    <include layout="@layout/footer" />
+
+</LinearLayout>

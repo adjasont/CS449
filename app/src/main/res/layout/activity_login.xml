@@ -1,33 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:baselineAligned="false">
 
-    <EditText
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/email"
-        android:text="Email" />
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/password"
-        android:text="Password" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
 
-    <Button
-        android:text="Login"
+            <TextView
+                android:text="Email"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailTextView"
+                android:textSize="18sp"
+                android:layout_width="60dp"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/email"
+                android:layout_width="300dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:text="Password"
+                android:layout_height="wrap_content"
+                android:id="@+id/passwordEditText"
+                android:textSize="18sp"
+                android:layout_width="90dp"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/password" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/login" />
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="Login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </GridLayout>
 
     <Button
         android:text="Not a Memeber? Register Now"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/register" />
+        android:id="@+id/register"
+        android:layout_row="1"
+        android:layout_column="1" />
+
 </LinearLayout>
