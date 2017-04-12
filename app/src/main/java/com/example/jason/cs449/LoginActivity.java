@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
         if (auth.getCurrentUser() != null){
-            startActivity(new Intent(LoginActivity.this, MainMenuActivity.class));
+            startActivity(new Intent(LoginActivity.this, GoalsActivity.class));
             finish();
         }
 
