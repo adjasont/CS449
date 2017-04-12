@@ -25,7 +25,7 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
-                    android:id="@+id/stats"
+                    android:id="@+id/goals"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
@@ -33,7 +33,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/goals"
+                    android:id="@+id/stats"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
